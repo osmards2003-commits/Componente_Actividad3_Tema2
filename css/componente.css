@@ -1,0 +1,126 @@
+
+.carrusel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-pantalla {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.carrusel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: #ffffff;
+    padding: 20px 15px;
+}
+
+.carrusel-info h5 { margin: 0 0 5px 0; font-size: 18px; font-weight: 600; }
+.carrusel-info p { margin: 0; font-size: 14px; opacity: 0.85; }
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: none;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.carrusel-btn:hover { background: rgba(255, 255, 255, 0.6); color: #000000; }
+.carrusel-btn.prev { left: 15px; }
+.carrusel-btn.next { right: 15px; }
+
+
+
+.acordeon-wrapper {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.acordeon-item {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.acordeon-item:last-child {
+    border-bottom: none;
+}
+
+.acordeon-cabecera {
+    width: 100%;
+    padding: 16px 20px;
+    background: #ffffff;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    color: #212529;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.acordeon-cabecera:hover {
+    background-color: #f8f9fa;
+}
+
+
+.acordeon-icono {
+    transition: transform 0.2s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.acordeon-item.activo .acordeon-icono {
+    transform: rotate(90deg);
+}
+
+.acordeon-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    background-color: #ffffff;
+}
+
+.acordeon-contenido {
+    padding: 0 20px 16px 20px;
+    color: #495057;
+    font-size: 14px;
+    line-height: 1.6;
+}

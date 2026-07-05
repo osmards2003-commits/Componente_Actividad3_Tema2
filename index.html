@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente - Actividad 3 </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/componente.css">
+</head>
+<body class="bg-light py-5">
+
+    <main class="container" style="max-width: 750px;">
+        
+        <section class="card shadow-sm p-4 mb-5 border-0 rounded-3">
+            <h2 class="h4 fw-bold mb-3 text-center">Galería de Naturaleza (Carrusel)</h2>
+            <p class="text-muted text-center small">Despasa las 10 fotografías usando las flechas de navegación.</p>
+            
+            <div id="mi-carrusel-contenedor"></div>
+        </section>
+
+        <section class="card shadow-sm p-4 border-0 rounded-3">
+            <h2 class="h4 fw-bold mb-3 text-center">Nirvana: Historia y Datos Clave</h2>
+            <p class="text-muted text-center small">Haz clic en cada sección para desplegar la información de la banda.</p>
+            
+            <div id="mi-acordeon-contenedor"></div>
+        </section>
+
+    </main>
+
+    <script src="js/componente.js"></script>
+    <script>
+
+        inicializarCarrusel('mi-carrusel-contenedor', [
+            { url: 'https://picsum.photos/id/10/750/375', titulo: 'Bosque Profundo', desc: 'La tranquilidad de la luz solar filtrándose entre los árboles.' },
+            { url: 'https://picsum.photos/id/15/750/375', titulo: 'Rocas del Desierto', desc: 'Formaciones geológicas esculpidas por el viento a través de los años.' },
+            { url: 'https://picsum.photos/id/28/750/375', titulo: 'Bosque de Coníferas', desc: 'Inmensos senderos naturales rodeados de pinos de gran altura.' },
+            { url: 'https://picsum.photos/id/29/750/375', titulo: 'Montañas Rocosas', desc: 'Cumbres imponentes bajo un cielo despejado de primavera.' },
+            { url: 'https://picsum.photos/id/37/750/375', titulo: 'Campos Visuales', desc: 'La sutil perspectiva de un terreno abierto e infinito.' },
+            { url: 'https://picsum.photos/id/49/750/375', titulo: 'Horizontes Costeros', desc: 'El oleaje constante golpeando la tranquilidad de los acantilados.' },
+            { url: 'https://picsum.photos/id/54/750/375', titulo: 'Caminos de Tierra', desc: 'Senderos rurales ideales para la desconexión y exploración.' },
+            { url: 'https://picsum.photos/id/116/750/375', titulo: 'Detalles de la Flora', desc: 'Hojas y vegetación nativa en primer plano capturando la humedad.' },
+            { url: 'https://picsum.photos/id/124/750/375', titulo: 'Valles Abiertos', desc: 'Praderas extensas que muestran la diversidad del ecosistema.' },
+            { url: 'https://picsum.photos/id/141/750/375', titulo: 'Nieve en las Cumbres', desc: 'El crudo invierno transformando los picos más altos del paisaje.' }
+        ]);
+
+        inicializarAcordeon('mi-acordeon-contenedor', [
+            { titulo: "1. Fundación de la banda (1987)", contenido: "Nirvana se formó en Aberdeen, Washington, por el vocalista y guitarrista Kurt Cobain y el bajista Krist Novoselic. Pasaron por varios bateristas antes de consolidar su alineación definitiva." },
+            { titulo: "2. El origen del nombre", contenido: "Antes de decidirse por 'Nirvana', la banda consideró nombres como Skid Row, Pen Cap Chew y Ted Ed Fred. Cobain eligió Nirvana porque buscaba un nombre que sonara hermoso, pacífico y espiritual en lugar de un nombre punk agresivo común." },
+            { titulo: "3. 'Bleach' (1989): El debut", contenido: "Su primer álbum de estudio fue lanzado por el sello independiente Sub Pop. Tuvo un costo de grabación de apenas $606.17 dólares, una suma financiada por el guitarrista Jason Everman, quien fue incluido brevemente en los créditos." },
+            { titulo: "4. La llegada de Dave Grohl (1990)", contenido: "Tras la salida de Chad Channing, Dave Grohl (proveniente de la banda de hardcore punk Scream) se unió como baterista definitivo en 1990, aportando la potencia rítmica que definiría el sonido definitivo del trío." },
+            { titulo: "5. El fenómeno de 'Nevermind' (1991)", contenido: "Lanzado en septiembre de 1991, el segundo álbum superó todas las expectativas comerciales. En enero de 1992, desbancó a 'Dangerous' de Michael Jackson del primer puesto de las listas de Billboard, cambiando la industria musical para siempre." },
+            { titulo: "6. 'Smells Like Teen Spirit'", contenido: "El sencillo principal de Nevermind se convirtió en el himno de la 'Generación X'. La frase proviene de una broma de Kathleen Hanna (vocalista de Bikini Kill), quien escribió en la pared de Cobain: 'Kurt smells like Teen Spirit', refiriéndose a una marca de desodorante juvenil." },
+            { titulo: "7. El sonido Grunge", contenido: "Nirvana popularizó el Grunge a nivel global, un subgénero del rock alternativo influenciado por el punk, el noise rock y el heavy metal, caracterizado estéticamente por guitarras distorsionadas y letras que expresaban apatía o frustración social." },
+            { titulo: "8. 'In Utero' (1993): Retorno a las raíces", contenido: "Su tercer y último álbum de estudio fue una respuesta deliberada al éxito comercial masivo. Producido por Steve Albini, buscaba un sonido mucho más crudo, áspero, natural y alejado de las producciones pulidas de las estaciones de radio." },
+            { titulo: "9. MTV Unplugged in New York (1993)", contenido: "Una de las presentaciones acústicas más famosas de la historia. A diferencia de otras bandas, Nirvana evitó tocar la mayoría de sus grandes éxitos comerciales y optó por interpretar temas menos conocidos y covers de artistas como David Bowie y Lead Belly." },
+            { titulo: "10. El fin de una era (1994)", contenido: "La banda llegó a su fin de manera abrupta en abril de 1994 tras el fallecimiento de Kurt Cobain a los 27 años. A pesar de su corta trayectoria y de contar con solo tres discos de estudio, Nirvana es considerada una de las agrupaciones más influyentes del rock moderno."}
+        ]);
+    </script>
+</body>
+</html>
